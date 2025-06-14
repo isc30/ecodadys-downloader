@@ -37,6 +37,9 @@ func main() {
 	}
 
 	downloadResources(append(images, videos...))
+
+	scanner := bufio.NewScanner(os.Stdin)
+	scanner.Scan()
 }
 
 type User struct {
