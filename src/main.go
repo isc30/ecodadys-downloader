@@ -102,7 +102,7 @@ func login() (User, error) {
 
 	id, ok := result["id"].(float64)
 	if !ok {
-		return User{}, fmt.Errorf("user id not found")
+		return User{}, fmt.Errorf("user id not found (incorrect user/pass)")
 	}
 
 	tokenData, ok := result["token"].(map[string]any)
